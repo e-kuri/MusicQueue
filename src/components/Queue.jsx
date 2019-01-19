@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import repository from '../../repository/FirebaseRepository';
+import repository from '../repository/FirebaseRepository';
 
 class Queue extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            name: 'none'
+            queue: []
         }
-        repository.getSessionDoc('queso').onSnapshot( docSnapshot => {
+        repository.getSessionDoc('uFrMniflhUmZuhHjr7Xf').onSnapshot( docSnapshot => {
             this.onDocumentChange(docSnapshot.data());
         }, err => {
             console.log('error');
@@ -16,11 +16,11 @@ class Queue extends Component {
     }
 
     onDocumentChange(docSnapshot) {
-        this.setState({name: docSnapshot.papas})
+        this.setState(docSnapshot)
     }
 
     render() {
-        return ( <div>{this.state.name}</div> )
+        return ( <div>{this.state.queue[0] ? this.state.queue[0] : ''}</div> )
     }
 } 
 

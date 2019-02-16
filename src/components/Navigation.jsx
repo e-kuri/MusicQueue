@@ -1,6 +1,6 @@
 import React from "react";
 import Index from './Index';
-import Queue from './Queue';
+import Queue from './Queue/Queue';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const Users = () => <h2>Users</h2>;

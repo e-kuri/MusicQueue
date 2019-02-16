@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import repository from '../repository/FirebaseRepository';
+import repository from '../repository/FirebaseImpl/FirebaseSessionRepository';
 import { Link } from 'react-router-dom'
 
 const Index = props => (

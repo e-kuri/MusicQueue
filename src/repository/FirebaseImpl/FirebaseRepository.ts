@@ -1,6 +1,5 @@
 import firebase from 'firebase';
 
-const SESSION_COLLECTION = 'Session';
 // Initialize Firebase
 const config = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -14,11 +13,8 @@ const config = {
 const firebaseApp = firebase.initializeApp(config);
 const database = firebaseApp.firestore();
 
-const getSessionDoc = sessionId => database.collection(SESSION_COLLECTION).doc(sessionId);
-
 const FirebaseRepository = {
-    getSessionDoc
+    database
 }
 
 export default FirebaseRepository;
-

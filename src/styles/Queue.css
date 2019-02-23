@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #282c34;
+    min-height: 100vh;
+    color: aliceblue
+}
+
+.header {
+    text-align: center;
+    margin: 2%
+}

@@ -6,14 +6,17 @@ interface QueueListProps {
 }
 
 const getQueueItems = (urls: string[]) => 
-    urls.map(it => <QueueListItem url={it}/>)
+    urls.map( (it, indx) => <QueueListItem 
+        url={it}
+        key={indx}/>)
 
 
 const QueueList = (props: QueueListProps) => {
     const {
         urls
     } = props;
-    return { getQueueItems(urls) };
+    console.log(urls);
+    return getQueueItems(urls);
 }
 
 export default QueueList;
